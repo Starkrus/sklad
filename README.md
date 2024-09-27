@@ -117,3 +117,7 @@
   - `vendor/bin/rector process --dry-run`
 - Обработка файлов:
   - `vendor/bin/rector process`
+
+
+### Создание пользователя Orchid
+ - php artisan orchid:admin admin admin@admin.com admin@admin.com
