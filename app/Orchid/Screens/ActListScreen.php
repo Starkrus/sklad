@@ -57,19 +57,13 @@ class ActListScreen extends Screen
     {
         return [
             Layout::table('acts', [
-                TD::make('id', 'ID')
-                    ->sort(), // Сортировка по ID
-                TD::make('sent', 'Куда отгрузили')
-                    ->sort(),
-                TD::make('date', 'Дата')
-                    ->sort(),
-                TD::make('received', 'Менеджер')
-                    ->sort(),
+                TD::make('id', 'ID')->sort(), // Сортировка по ID
+                TD::make('sent', 'Куда отгрузили')->sort(),
+                TD::make('date', 'Дата')->sort(),
+                TD::make('received', 'Менеджер')->sort(),
                 TD::make('comments', 'Комментарии'),
-                TD::make('file_path', 'Файл')
-                    ->render(function (Act $act) {
-                        return $act->file_path
-                            ? "<a href='".url($act->file_path)."' class='btn btn-primary' target='_blank'>Открыть файл</a>"
+                TD::make('file_path', 'Файл')->render(function (Act $act) {
+                        return $act->file_path ? "<a href='".url($act->file_path)."' class='btn btn-primary' target='_blank'>Открыть файл</a>"
                             : 'Нет файла';
                     }),
             ]),
