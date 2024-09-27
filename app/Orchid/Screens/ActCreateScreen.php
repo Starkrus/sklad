@@ -41,16 +41,28 @@ class ActCreateScreen extends Screen
         return [
             Layout::rows([
                 Input::make('sent')
-                    ->title('Отправитель')
+                    ->title('Получатель')
                     ->required(),
 
                 Input::make('date')
                     ->type('date')
-                    ->title('Дата')
+                    ->title('Дата отгрузки')
                     ->required(),
 
                 Input::make('received')
-                    ->title('Получатель')
+                    ->title('Менеджер')
+                    ->required(),
+
+                Input::make('comments')
+                    ->title('Комментарий')
+                    ->required(),
+
+                Input::make('received')
+                    ->title('Наименование товара')
+                    ->required(),
+
+                Input::make('received')
+                    ->title('Количество')
                     ->required(),
             ]),
         ];
