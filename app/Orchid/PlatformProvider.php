@@ -39,8 +39,9 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('house-check-fill')
                 ->list([
                     Menu::make('Заказы')->icon('box-seam-fill'),
-                    Menu::make('Акты')->icon('file-earmark-pdf-fill'),
+                    Menu::make('Акты')->icon('file-earmark-pdf-fill')->route('platform.acts'),
                 ]),
+
 
 //            Menu::make('Sample Screen')
 //                ->icon('bs.collection')
@@ -94,6 +95,7 @@ class PlatformProvider extends OrchidServiceProvider
 //                ->badge(fn () => Dashboard::version(), Color::DARK),
         ];
     }
+
 
     /**
      * Register permissions for the application.
