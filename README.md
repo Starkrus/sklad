@@ -31,6 +31,10 @@
 - `chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache`
 - `chmod -R 775 /var/www/storage /var/www/bootstrap/cache`
 - `composer setup`
+- 
+### Создание пользователя Orchid
+- php artisan orchid:admin admin admin@admin.com admin@admin.com
+
 
 ### При последующих запусках
 - `docker compose up -d`
